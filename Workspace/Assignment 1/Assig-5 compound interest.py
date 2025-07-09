@@ -1,5 +1,0 @@
-principal=int(input("principal:"))
-rate=float(input("rate:"))
-time=int(input("time:"))
-compound_interest= principal*(1+(rate/1))**(1*time)
-print("compound interest:",compound_interest)
