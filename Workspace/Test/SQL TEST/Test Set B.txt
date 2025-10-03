@@ -1,0 +1,107 @@
+Name - Tushar Patil 
+Set - B
+FRN - FRN-11P0625/003
+
+Q1.
+
+Select customers from Customers 
+order by names ;
+
+
+
+Q2.
+
+select products from Products 
+order by products descending;
+
+
+Q3.
+
+select employees from Employees 
+order by salary desc 1,1;
+
+Q4. 
+
+select count(*),cites from Customers
+group by cites; 
+ 
+
+Q5.
+select department, sum(salary)
+FROM employees
+group by department
+having sum(salary) > 200000;
+
+Q6.
+
+select customerName,phone_number from Customer
+substring(phone_number,,4)
+substring(customerName,1,3)
+
+Q7.
+
+select * from Products
+where product_name LIKE '%Pro%';
+
+Q8.
+
+select sum(students) from students
+group by courses 
+having sum(student) > = 30
+
+Q9.
+
+select count(*)
+from Orders
+group by month(order_date);
+
+Q10.
+
+select department from Employees
+where max(salary) ,min(salary);
+
+Q11.
+a)DATA
+
+Q12.
+a) Order by Desc
+
+Q13.
+a) asc
+
+Q14.
+c)16
+
+Q15.
+b) COUNT()
+
+Q16.
+
+select c.customer_id, c.customer_name, avg(o.total_amount)
+from Customers c join orders o
+on c.customer_id = o.customer_id
+group by c.customer_id, c.customer_name
+having count(o.order_id) > 2;
+
+Q17.
+
+select p.product_id, p.product_name,count (s.sale_id)
+from products p join sales s 
+on p.product_id = s.product_id
+Group by p.product_id, p.product_name
+having T count(s.sale_id) > 50;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
