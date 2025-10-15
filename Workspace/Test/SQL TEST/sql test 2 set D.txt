@@ -1,0 +1,82 @@
+Name - Tushar Patil 
+Set - D
+FRN - FRN-11P0625/003
+
+
+
+
+Q1. 
+ 
+select mname, genre from movies;
+
+Q2.
+
+select * from actor,
+where name='%khan%';
+
+Q3.
+
+select * from movies,
+where release_date between 1990 and 2000;
+
+Q4.
+select avg(imbd_rating) from movies,
+
+Q5.
+
+select * from actors
+order by count(no_of_awards);
+
+Q6.
+
+select name, count(m.m_id)
+from actors 
+join movie ma 
+on a.act_id = ma.act_id
+group by name;
+
+
+
+Q7.
+
+select a.name, m.m_name
+from actors a
+join movie_actor ma ON a.act_id = ma.act_id
+join movies m ON ma.movie_id = m.movie_id;
+
+
+Q8.
+
+select distinct m.movie_name
+from  movies m
+join movie_actor ma ON m.movie_id = ma.movie_id
+join actors a ON ma.actor_id = a.actor_id
+where a.nationality != 'Indian';
+
+
+
+
+Q9.
+
+select m.movie_name
+FROM movies m
+JOIN movie_actor ma ON m.movie_id = ma.movie_id
+JOIN actors a ON ma.actor_id = a.actor_id
+WHERE a.actor_name = 'Salman Khan';
+
+
+
+
+
+
+Q10.
+
+select distinct a.name
+FROM actors a
+join a.name na on a.act_id = ma.act_id
+Join movies m ON ma.m_id = m.m_id
+where m.genre = 'comedy';
+
+
+
+
